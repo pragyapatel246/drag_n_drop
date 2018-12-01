@@ -1,0 +1,33 @@
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <% @movie.images.each do |i|%>
+  <%= image_tag (i.url(:thumb).to_s)%>
+  <%end%>
+</p>
+
+<div>
+  <strong>Avatar:</strong>
+  <%= image_tag @movie.avatar.url(:medium) %>
+</div>
+
+
+<div><strong>Pics:</strong>
+  <% @movie.photos.each do |i|%>
+    <%= (i.id) %>
+
+  <%= image_tag(i.pic.url) %>
+  <%end%>
+</div>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

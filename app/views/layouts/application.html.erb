@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Democarrierwave</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'http://yandex.st/bootstrap/3.1.1/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    table, td, th {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+</html>
